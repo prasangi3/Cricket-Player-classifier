@@ -41,7 +41,7 @@ This notebook includes all the steps:
 
 ##  Screenshots
 
-> Make sure to upload screenshots in your repo (rename to `screenshot1.png`, `screenshot2.png` etc.)
+
 
 ![Screenshot 1](screenshot1.png)  
 *Classification results on uploaded image*
