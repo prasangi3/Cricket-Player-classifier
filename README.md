@@ -69,6 +69,8 @@ Cricket-Player-classifier/
 │   ├── app.html
 │   ├── app.css
 │   ├── app.js
+│   ├── dropzone.min.css
+│   └── dropzone.min.js
 │
 ├── requirements.txt
 ├── README.md
