@@ -14,7 +14,20 @@ This project is a mini machine learning application that classifies **Indian cri
 - Allows image upload in a browser with prediction and class probability display
 
 ---
+## 📓 View Model Training Code
 
+You can view the complete model training code in the Jupyter Notebook:
+
+👉 **[Open `cricket_player_classifier.ipynb`](model/cricket_player_classifier.ipynb)**
+
+This notebook includes all the steps:
+- Image preprocessing
+- Feature extraction
+- Model training
+- Accuracy and confusion matrix
+- Model saving
+
+---
 ##  Cricketers Trained
 
 - Hardik Pandya  
