@@ -1,14 +1,21 @@
-# Cricket-Player-classifier
-A machine learning–based web application that classifies Indian cricket players from facial images using classical ML techniques (SVM + DWT). Built with Python, OpenCV, scikit-learn, and a Flask-powered web interface with HTML, CSS, and JavaScript.
-# 🏏 Image Classification of Indian Cricket Players
+#  Cricket Player Image Classifier using Classical ML
 
-This is a machine learning–based web application that classifies **Indian cricket players** from facial images using traditional ML techniques — without using CNN or deep learning.
-
-The system uses **Support Vector Machine (SVM)** along with **Discrete Wavelet Transform (DWT)** for feature extraction. Face and eye detection are done using OpenCV Haar cascades. The web interface is built using **HTML, CSS, JavaScript**, and **Flask**.
+This project is a mini machine learning application that classifies **Indian cricket players** based on facial images. It uses **classical machine learning (SVM)** instead of CNN and is built with a simple, intuitive web interface using Flask.
 
 ---
 
-##  Cricketers Included
+##  What This Project Does
+
+- Preprocesses and crops images to detect face and eyes using OpenCV Haar cascades
+- Extracts features using **Discrete Wavelet Transform (DWT)**
+- Trains three classifiers: **Support Vector Machine (SVM)**, **Logistic Regression**, and **Random Forest**
+- Evaluates each model using confusion matrix and accuracy score
+- Saves the best-performing model (`saved_model.pkl`) and label map (`class_dictionary.json`)
+- Allows image upload in a browser with prediction and class probability display
+
+---
+
+##  Cricketers Trained
 
 - Hardik Pandya  
 - MS Dhoni  
@@ -19,36 +26,68 @@ The system uses **Support Vector Machine (SVM)** along with **Discrete Wavelet T
 
 ---
 
-##  Screenshot
+##  Screenshots
 
-Upload an image → see predicted cricketer and class probabilities.
+> Make sure to upload screenshots in your repo (rename to `screenshot1.png`, `screenshot2.png` etc.)
 
-> Make sure to upload a file named `screenshot.png` in your repo.
+![Screenshot 1](screenshot1.png)  
+*Classification results on uploaded image*
 
-![Screenshot](screenshot.png)
-
----
-
-##  Technologies Used
-
-- Python  
-- OpenCV  
-- PyWavelets  
-- Scikit-learn (SVM)  
-- Flask  
-- HTML, CSS, JavaScript
+![Screenshot 2](screenshot2.png)  
+*Training result – Confusion Matrix*
 
 ---
 
-##  How It Works
+##  Tools & Technologies Used
 
-1. Image is uploaded through the browser (drag and drop)
-2. Face and eye are detected using Haar cascade
-3. Features extracted using wavelet transform (DWT)
-4. SVM classifier predicts the cricketer
-5. Results and probability table are displayed
+- **Python 3**
+- **Flask** for backend web application
+- **OpenCV** for face and eye detection
+- **PyWavelets** for feature extraction
+- **scikit-learn** for machine learning algorithms
+- **HTML, CSS, JS** for frontend
+- **Jupyter Notebook** for model training
 
 ---
 
+##  Folder Structure
 
+```
+Cricket-Player-classifier/
+│
+├── model/
+│   ├── cricket_player_classifier.ipynb     # Notebook for training and evaluation
+│   ├── saved_model.pkl                     # Final trained model
+│   └── class_dictionary.json               # Label mapping
+│
+├── server/
+│   ├── server.py
+│   ├── util.py
+│   └── wavelet.py
+│
+├── ui/
+│   ├── app.html
+│   ├── app.css
+│   ├── app.js
+│
+├── requirements.txt
+├── README.md
+└── screenshot1.png
+```
 
+---
+
+##  How to Run
+
+```bash
+pip install -r requirements.txt
+python server/server.py
+```
+
+Open the browser at `http://127.0.0.1:5000` and upload a face image.
+
+---
+
+##  Note
+- Model is trained using a limited dataset (cropped player images)
+- No CNN or deep learning involved
