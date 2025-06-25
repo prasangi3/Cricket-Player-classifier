@@ -14,7 +14,7 @@ This project is a mini machine learning application that classifies **Indian cri
 - Allows image upload in a browser with prediction and class probability display
 
 ---
-## 📓 View Model Training Code
+##  View Model Training Code
 
 You can view the complete model training code in the Jupyter Notebook:
 
